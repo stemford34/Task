@@ -27,11 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = '/authorization/'
 
 # Application definition
 
 INSTALLED_APPS = [
     'authorization',
+    'TaskManager',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -84,12 +86,15 @@ DATABASES = {
         'OPTIONS': {
             'charset': 'utf8mb4',
 
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES,NO_ZERO_DATE,"
-                            "NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,"
-                            "NO_AUTO_CREATE_USER', innodb_strict_mode=1",
+            # 'init_command': "SET sql_mode='STRICT_TRANS_TABLES,NO_ZERO_DATE,"
+            #                 "NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,"
+            #                 "NO_AUTO_CREATE_USER', innodb_strict_mode=1",
         },
     }
 }
+
+
+AUTH_USER_MODEL = 'authorization.User'
 
 
 # Password validation
@@ -128,8 +133,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/TaskManager/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/static/',
+]
 
 DJANGO_MYSQL_REWRITE_QUERIES = True
