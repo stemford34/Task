@@ -1,4 +1,4 @@
-"""TaskManager URL Configuration
+"""base URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -14,12 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from . import views
+from django.urls import re_path, path
+from django.conf.urls import include
+
 
 urlpatterns = [
-    path('', views.index_page, name='index_page'),
-    path('admin/', admin.site.urls),
-    path('authorization/', include('authorization.urls')),
+    re_path(r'^', include('TaskManager.index.urls', namespace='index')),
+    # re_path(r'^', include('TaskManager.authorization.urls', namespace='index')),
+    re_path(r'^authorization/', include('TaskManager.authorization.urls', namespace='authorization')),
+    re_path(r'^table_editor/', include('TaskManager.table_editor.urls', namespace='table_editor')),
+    # path('api-auth/', include('rest_framework.urls')),
     # path('handler/', views.handler, name="handler"),
+    re_path(r'^admin/', admin.site.urls),
 ]

@@ -1,5 +1,0 @@
-[client]
-database = TaskManager
-user = root
-password = 123456789
-default-character-set = utf8

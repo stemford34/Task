@@ -1,0 +1,58 @@
+{% extends "base/base.html" %}
+
+{% load staticfiles %}
+{% block head_block %}
+        <link rel="stylesheet" href="{% static 'authorization/css/authorization.css' %}">
+        <script src="{% static 'authorization/js/authorization.js' %}"></script>
+{% endblock %}
+
+{% block main_content %}
+{#    <div class="vid-container">#}
+{#		<video class="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>#}
+{#			<source src="http://mazwai.com/system/posts/videos/000/000/109/webm/leif_eliasson--glaciartopp.webm?1410742112" type="video/webm">#}
+{#		</video>#}
+{#		<div class="inner-container">#}
+{#			<video class="bgvid inner" autoplay="autoplay" muted="muted" preload="auto" loop>#}
+{#				<source src="http://mazwai.com/system/posts/videos/000/000/109/webm/leif_eliasson--glaciartopp.webm?random=1" type="video/webm">#}
+{#			</video>#}
+{#			<div class="box">#}
+{#				<h1>Registration</h1>#}
+{#				<input id="username" type="text" placeholder="Username"/>#}
+{#				<input id="username" type="text" placeholder="Username"/>#}
+{#				<input id="username" type="text" placeholder="Username"/>#}
+{#				<input id="password" type="password" placeholder="Password"/>#}
+{#				<button>Login</button>#}
+{#				<p>Not a member? <span>Sign Up</span></p>#}
+{#			</div>#}
+{#		</div>#}
+{#	</div>#}
+
+    <div class="wrapper fadeInDown">
+		<div id="formContent">
+			<!-- Tabs Titles -->
+			<h2 class="active"> Sign In </h2>
+			<h2 class="inactive underlineHover">Sign Up </h2>
+
+			<!-- Icon -->
+			<div class="fadeIn first">
+				<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+			</div>
+
+            <form method="post">{% csrf_token %}
+            </form>
+
+			<!-- Login Form -->
+{#			<form>#}
+{#				<input type="text" id="login" class="fadeIn second" name="login" placeholder="Login">#}
+{#				<input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">#}
+{#				<input type="submit" class="fadeIn fourth" value="Log In">#}
+{#			</form>#}
+
+			<!-- Remind Passowrd -->
+{#			<div id="formFooter">#}
+{#				<a class="underlineHover" href="#">Forgot Password?</a>#}
+{#			</div>#}
+
+		</div>
+	</div>
+{% endblock %}

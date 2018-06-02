@@ -1,0 +1,341 @@
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
+
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height: 400px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: -webkit-gradient(linear, left top, right top, from(#25c481), to(#25b7c4));
+  background: -o-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+    padding: 50px;
+}
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+tbody tr:hover {
+  /*background-color: rgba(255, 255, 255, 0.3);*/
+}
+tbody td:hover:before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*width: 80vw;*/
+    margin: 0;
+    padding: 0;
+}
+.btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+     border: 1px solid rgba(255,255,255,0.3);
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  /*box-shadow: 0 0 20px #eee;*/
+  /*border-radius: 10px;*/
+ }
+
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.btn-3 {
+  /*background-image: -webkit-gradient(linear, left top, right top, from(#84fab0), color-stop(51%, #8fd3f4), to(#84fab0));*/
+  /*background-image: -webkit-linear-gradient(left, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);*/
+  /*background-image: -o-linear-gradient(left, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);*/
+  /*background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);*/
+    background-color: transparent;
+    transition: .3s;
+}
+.btn-3.active{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+textarea {
+    resize: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        width: 100%;
+    height: 300px;
+    line-height: 150%;
+      background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: -webkit-gradient(linear, left top, right top, from(#25c481), to(#25b7c4));
+  background: -o-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-size: 1em;
+  font-family: arial;
+    border: 1px solid #fff;
+  color: #fff;
+}
+.admin__option{
+    display: none;
+}
+.admin__option.active{
+    display: block;
+}
+#tbl-body td{
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+    width: 20%;
+}
+#tbl-body td.td_name, #tbl-body td.td_value{
+    width: 40%;
+}
+#tbl-body td:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#tbl-body tr td:last-child{
+    cursor: auto;
+}
+#tbl-body tr td:last-child:hover{
+    background-color: transparent;
+}
+#tbl-body tr:first-child .arrow_up{
+    display: none;
+}
+#tbl-body tr:first-child .arrow_down{
+    margin-left: 0;
+}
+#tbl-body tr:last-child .arrow_down{
+    display: none;
+}
+#table-title th{
+    width: 20%;
+}
+#table-title th.name_title, #table-title th.value_title{
+    width: 40%;
+}
+.arrow_up, .arrow_down{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    cursor: pointer;
+    margin-top: 6px;
+}
+.arrow_down{
+    margin-left: 20px;
+    margin-top: -6px;
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+}
+.td_remove{
+    text-align: center;
+}
+.td_remove:hover{
+}
+.td_sort div{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.btn-container{
+    margin-top: 10px;
+}
+.btn-container a{
+    cursor: pointer;
+}
+#add_column_form{
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+#add_column_form input, #save_json_form input{
+    width: 48%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: transparent;
+    font-size: 1em;
+    font-family: arial;
+    color: #fff;
+    border: 1px solid #fff;
+}
+#add_column_form input:focus{
+    outline: none;
+}
+#add_column_form input::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.5);
+}
+#add_column_form input:-ms-input-placeholder{
+    color: rgba(255,255,255,0.5);
+}
+#add_column_form input::-ms-input-placeholder{
+    color: rgba(255,255,255,0.5);
+}
+#add_column_form input::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+#add_column_form input[type='submit'], #save_json_form input{
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+#add_column_form input[type='submit']:hover, #save_json_form input:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#save_json_form{
+    margin-top: 10px;
+}
+@media screen and (max-width: 500px) {
+    section{
+        padding: 10px;
+    }
+    #add_column_form input{
+        width: 100%;
+        margin-top: 10px;
+    }
+    #add_column_form input:first-child{
+        margin-top: 0;
+    }
+    #tbl-body td.td_name, #tbl-body td.td_value, #table-title th.name_title, #table-title th.value_title{
+        width: 35%;
+    }
+    #tbl-body tr td:last-child, #table-title th:last-child{
+        padding: 0;
+        width: 30%;
+    }
+}
